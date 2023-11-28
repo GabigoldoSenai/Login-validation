@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+/*### Primary*/
+
+--Red: hsl(0, 100%, 74%);
+--Green: hsl(154, 59%, 51%);
+--Green-shadow: hsl(154, 63%, 45%);
+
+/*### Accent*/
+
+--Blue: hsl(248, 32%, 49%);
+
+/*### Neutral*/
+
+--Dark-Blue: hsl(249, 10%, 26%);
+--Grayish-Blue: hsl(246, 25%, 77%);
+--White: #fff;
+}
+
+*{
+    font-family: 'poppins';
+    margin:0;
+}
+
+body{
+    background: url(../images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+.content{
+    margin: 10%;
+    display: flex;
+    gap: 50px;
+}
+
+.text-content, .form-content{
+    min-width: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+}
+
+.text-content{
+    color:var(--White);
+}
+
+.text-content>h1{
+    line-height: 55px;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--White);
+    border-radius: 10px;
+    border: 50px solid var(--White);
+    width: -moz-available;
+}
+
+input, #btn-submit{
+    border-radius: 5px;
+    width: 80%;
+    border-style: groove;
+    padding: 15px;
+    box-sizing: content-box;
+    font-weight: 600;
+}
+
+#btn-submit{
+    background-color: var(--Green);
+    border: none;
+    cursor:pointer;
+    text-transform: uppercase;
+    color: var(--White);
+    box-shadow: 0px 5px 0px 0px var(--Green-shadow);
+}
+
+#btn-submit:hover{
+    opacity: 70%;
+}
+
+.pricing-box{
+    padding: 10px 0;
+    width: 100%;
+    background-color: var(--Blue);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--White);
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+.terms-text{
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+}
+
+.terms-text>.bold-text{
+    color: var(--Red);
+    cursor: pointer;
+}
+
+.pricing-box, 
+.form-box{
+    box-shadow: 0px 7px 0px 0px rgba(0,0,0,0.15);
+}
+
+.error{
+    visibility: hidden;
+}
+
+.error> .invalid{
+    visibility: visible;
+}
+
+
+
+@media(max-width: 975px){
+    body{
+        height: auto;
+    }
+    .content{
+        flex-direction: column;
+    }
+
+    .text-content, .form-content{
+        width: 100%;
+    }
+}
